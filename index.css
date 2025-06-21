@@ -1,0 +1,35 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content:right;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+h1{
+    color:black;
+}
+footer{
+    justify-items: center;
+    color: black;
+}

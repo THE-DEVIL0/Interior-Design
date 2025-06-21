@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- <h1>Hello, world!</h1> -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div style="background-color: black;" class="container-fluid">
+      <!-- <a class="navbar-brand w-50" href="#">Radiant Interior</a> -->
+      <img src="WhatsApp Image 2025-04-10 at 22.24.26_4abffe86.jpg" height="100" width="100" alt="image3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="#">Our work</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link disabled" aria-disabled="true">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleIndicators" class="carousel slide">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+
+      <!-- SLIDE 1 -->
+      <div class="carousel-item active">
+        <img src="image copy.png" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="image">
+        <div class="carousel-caption d-none d-md-block" style="margin-bottom: 100px;">
+          <h5 class="display-3 fw-bold text-white">New Level Of Interior</h5>
+          <p class="lead text-white">Experience elegance, comfort, and innovation redefined. Transforming spaces into timeless masterpieces.</p>
+          <a href="#" class="btn btn-primary mt-3">Learn More</a>
+        </div>
+      </div>
+      
+    
+      <!-- SLIDE 2 -->
+      <div class="carousel-item">
+        <img src="image copy 2.png" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="image2">
+        <div class="carousel-caption d-none d-md-block" style="margin-bottom: 100px;">
+          <h5 class="display-3 fw-bold text-white">High-End Interior Design</h5>
+          <p class="lead text-white">Luxury that speaks for itself. Where sophistication meets functionality.</p>
+          <a href="#" class="btn btn-primary mt-3">Learn More</a>
+        </div>
+      </div>
+    
+      <!-- SLIDE 3 -->
+      <div class="carousel-item">
+        <img src="image copy 4.png" class="d-block w-100" style="height: 600px; object-fit: cover;" alt="image3">
+        <div class="carousel-caption d-none d-md-block" style="margin-bottom: 100px;">
+          <h5 class="display-3 fw-bold text-white">Best Furniture and Decor</h5>
+          <p class="lead text-white">Crafted for comfort, styled for elegance. Discover timeless pieces that complete your space.</p>
+          <a href="#" class="btn btn-primary mt-3">Learn More</a>
+        </div>
+      </div>
+    
+    </div>
+    
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- main content -->
+  <!-- main content -->
+  <div class="mt-5">
+    <h3 style="text-align: center;color: cadetblue;">[Our Services]</h3>
+    <h1 style="text-align: center;">What can we offer</h1>
+  </div>
+  <style>
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+      border: 2px solid transparent;
+      /* Initially no border */
+      border-radius: 10px;
+      /* Rounded corners */
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      border-color: black;
+      /* Black border on hover */
+    }
+  </style>
+
+  <div class="container mt-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card" style="width: 100%; height: 15rem;">
+          <div class="card-body">
+            <h3 style="text-align: center ; color: black;" class="card-title"><i>Residential Interior Design</i></h3>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">Turn your house into a home with personalized design solutions.
+              We bring comfort, style, and functionality together to create living spaces that reflect your lifestyle.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 100%; height: 15rem;">
+          <div class="card-body">
+            <h3 style="text-align: center ; color: black;" class="card-title"><i>Commercial Spaces</i></h3>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">We design workspaces that inspire productivity and leave lasting impressions.
+              From offices to retail, we blend style with function for your business needs.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 100%; height: 15rem;">
+          <div class="card-body">
+            <h3 style="text-align: center ; color: black;" class="card-title"><i>Renovations & Makeovers</i></h3>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">Breathe new life into old spaces.
+              Whether it’s a subtle refresh or a full transformation, we re-imagine interiors to match your evolving
+              style.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 100%; height: 15rem;">
+          <div class="card-body">
+            <h3 style="text-align: center ; color: black;" class="card-title"><i>3D Layout and Visualization</i></h3>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">Visualize your dream space before it comes to life.
+              Our 3D designs offer a realistic preview, helping you make confident decisions with clarity and precision.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 100%; height: 15rem;">
+          <div class="card-body">
+            <h3 style="text-align: center ; color: black;" class="card-title"><i>Custom Furniture & Decor</i></h3>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">Bring your vision to life with furniture and decor tailored just for you.
+              From statement pieces to subtle accents, we craft designs that reflect your personality and elevate your
+              space
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 100%; height: 15rem;">
+          <div class="card-body">
+            <h3 style="text-align: center ; color: black;" class="card-title"><i>Custom Solution</i></h3>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">Every space is unique-and so is our approach.
+              We offer fully customized interior solutions that align with your needs, style, and vision from start to
+              finish.
+            </p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <i></i>
+  <!-- <div class="mt-5"> -->
+  <!-- <h3  style="text-align: center;">About Us</h3> -->
+  <!-- <h1 style="text-align: center;"></h1> -->
+  <!-- </div> -->
+  <div class="container">
+    <h1 class="text-center p-5 mb-5 mt-5">About Us</h1>
+
+    <section style="position: relative; background-image: url('image copy 5.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Overlay -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
+    
+      <!-- Content -->
+      <div class="container py-5" style="position: relative; z-index: 2; color: white;">
+        <div class="row align-items-center">
+          <div class="col-md-8 mx-auto text-center">
+            <p>
+              At <strong>Radiant Interior</strong>, we believe that design is not just about aesthetics; it’s about creating spaces that
+              inspire and function harmoniously with your lifestyle. Our passion for innovative design and attention to detail
+              is reflected in every project we undertake. Whether transforming a residential haven, curating commercial
+              spaces, or creating custom furniture, we work closely with our clients to bring their unique visions to life.
+              With a focus on creativity, quality craftsmanship, and personalized service, we are committed to delivering
+              interiors that truly resonate with our clients. From concept to completion, Radiant Interior ensures that every
+              detail shines.
+            </p>
+            <button style="background-color: blue; color: white;" type="button" class="btn mt-3">
+              Book Your Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+  <div class="mt-5">
+    <h3 style="text-align: center;color: cadetblue;">[Our Gallery]</h3>
+    <h1 style="text-align: center;">Recent Projects</h1>
+    <div class="d-flex justify-content-center gap-5 mt-4">
+      <button type="button" class="btn btn-outline-dark">All</button>
+      <button type="button" class="btn btn-outline-dark">Apartment</button>
+      <button type="button" class="btn btn-outline-dark">Bedroom</button>
+      <button type="button" class="btn btn-outline-dark">Kitchen</button>
+      <button type="button" class="btn btn-outline-dark">Office</button>
+    </div>
+
+
+    <div class="container mt-4">
+      <div class="row g-4">
+        <div class="col-md-8">
+          <img style="height: 800px; " src="image copy 5.png" alt="Living Room" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-4 d-flex flex-column gap-4">
+          <img style="height: 400px; width: 500px;" src="image copy 6.png" alt="Bedroom"
+            class="img-fluid rounded shadow">
+          <img style="height: 370px;" src="image copy 7.png" alt="Kitchen" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4">
+      <div class="row g-4">
+
+        <div class="col-md-4 d-flex flex-column gap-4">
+          <img style="height: 400px; width: 500px;" src="image copy 8.png" alt="Bedroom"
+            class="img-fluid rounded shadow">
+          <img style="height: 370px;" src="image copy 10.png" alt="Kitchen" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-8">
+          <img style="height: 800px; " src="image copy 9.png" alt="Living Room" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+  <!-- CONSULTATION SECTION -->
+<section 
+style="background-image: url('f9de7468-9c1c-4e7b-8e0b-f6055c77239e.png'); 
+       background-size: cover; 
+       background-position: center; 
+       background-repeat: no-repeat; 
+       position: relative;">
+
+<!-- Dark Overlay -->
+<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background-color: rgba(0, 0, 0, 0.8); z-index: 1;"></div>
+
+<!-- Content -->
+<div class="container py-5 d-flex justify-content-center align-items-center" 
+     style="position: relative; z-index: 2;">
+  <div class="text-center text-white">
+    <p style="letter-spacing: 2px;">[ FREE CONSULTATION ]</p>
+    <h1 class="display-4 fw-bold">Book A Free Consultation</h1>
+    <hr style="width: 100px; border: 2px dotted white; margin: 1rem auto;">
+    <p style="letter-spacing: 2px;">[ CALL US TODAY ]</p>
+    <h2 style="font-size: 2.5rem;">+92 314 1979700</h2>
+    <p><em>Or Click Here</em></p>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="text-white mt-5" style="background-color: #111;">
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-4 mb-4 p-5">
+      <h5 class="fw-bold">Contacts</h5>
+      <p><i class="bi bi-geo-alt-fill me-2"></i> C-14, 1st Sunset Street, Phase-2 Extension, D.H.A Karachi, Pakistan</p>
+      <p><i class="bi bi-envelope-fill me-2"></i> fahadd.umair@gmail.com</p>
+      <p><i class="bi bi-telephone-fill me-2"></i> +92 335 9363714</p>
+    </div>
+    <div class="col-md-4 text-center mb-4">
+      <img src="WhatsApp Image 2025-04-10 at 22.24.26_4abffe86.jpg" alt="logo" style="max-height: 100px; border-radius: 10px;">
+      <p class="mt-3">The secret is a smoothly working team of disparate people who are each endowed with some special talent.</p>
+      <div class="d-flex justify-content-center gap-3 mt-3">
+        <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4 p-5">
+      <h5 class="fw-bold text-md-end">Latest Projects</h5>
+      <ul class="list-unstyled text-md-end">
+        <li>Stylish Family Appartment</li>
+        <li>APARTMENT CORRIDOR</li>
+        <li>Modern Office Designs</li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center border-top pt-3 mt-4">
+    <p class="mb-0">
+      Copyright © 2024 | Developed with <span style="color: red;">❤️</span> by<br>
+      <strong>Hamza Shabbir</strong>
+    </p>
+  </div>
+</div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
