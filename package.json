@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "css":"npx @tailwindcss/cli -i ./tailwind/input.css -o ./tailwind/output.css --watch"
+    "css": "npx @tailwindcss/cli -i ./tailwind/input.css -o ./public/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.10",
     "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mongoose": "^8.16.0",
     "tailwindcss": "^4.1.10"
