@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book <%= title %> | Radiant Interiors</title>
+  <link href="/css/output.css" rel="stylesheet" />
+  <script>
+    function updateScheduledDate() {
+      const preferredDateInput = document.getElementById("preferredDate");
+      const scheduledDateSpan = document.getElementById("scheduledDate");
+
+      preferredDateInput.addEventListener("input", () => {
+        const date = new Date(preferredDateInput.value);
+        if (!isNaN(date)) {
+          date.setDate(date.getDate() + 1);
+          const scheduled = date.toISOString().split("T")[0];
+          scheduledDateSpan.textContent = scheduled;
+        } else {
+          scheduledDateSpan.textContent = "-";
+        }
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", updateScheduledDate);
+  </script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen py-12 px-4">
+
+  <div class="max-w-2xl mx-auto bg-gray-800 rounded-xl shadow-xl p-8">
+    <h1 class="text-3xl font-bold mb-6 text-center">Book: <%= title %></h1>
+
+    <% if (error) { %>
+      <div class="bg-red-500 text-white text-center py-2 mb-4 rounded">
+        <%= error %>
+      </div>
+    <% } %>
+
+    <form action="/book-renovation/<%= encodeURIComponent(title) %>" method="POST" class="space-y-5">
+
+      <!-- Preferred Date -->
+      <div>
+        <label for="preferredDate" class="block text-sm font-medium text-gray-300 mb-1">Preferred Date</label>
+        <input type="date" name="preferredDate" id="preferredDate" required
+          class="w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:ring focus:ring-cyan-500" />
+      </div>
+<!-- Address -->
+<div>
+    <label for="address" class="block text-sm font-medium text-gray-300 mb-1">Address</label>
+    <input type="text" name="address" id="address" required
+      class="w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:ring focus:ring-cyan-500"
+      placeholder="Enter your delivery or renovation address"
+      value="<%= address %>" />
+  </div>
+  
+  
+      <!-- Auto-scheduled Date -->
+      <div>
+        <p class="text-sm text-gray-400">Scheduled Date: 
+          <span id="scheduledDate" class="font-semibold text-cyan-400">-</span>
+        </p>
+      </div>
+
+      <!-- Notes (Optional) -->
+      <div>
+        <label for="notes" class="block text-sm font-medium text-gray-300 mb-1">Additional Notes (optional)</label>
+        <textarea name="notes" id="notes" rows="3"
+          class="w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:ring focus:ring-cyan-500"
+          placeholder="Any preferences or instructions?"></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="flex justify-between">
+        <a href="/book-renovation" class="text-sm text-gray-300 hover:underline">&larr; Back</a>
+        <button type="submit"
+          class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded shadow transition">
+          Submit Booking
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>

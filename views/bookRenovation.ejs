@@ -6,61 +6,64 @@
   <title>Book Renovation | Radiant Interiors</title>
   <link href="/css/output.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-black text-white min-h-screen">
 
+  <!-- Header -->
   <div class="container mx-auto py-10 px-4">
-    <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">Book a Renovation Service</h1>
+    
+    <!-- Back Button -->
+    <div class="mb-6">
+      <a href="/services" class="inline-block bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition duration-200">
+        ← Back to Services
+      </a>
+    </div>
+
+    <h1 class="text-4xl font-bold text-center text-white mb-10">Book a Renovation Service</h1>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Card 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="/images/renovation1.jpg" alt="Living Room Makeover" class="w-full h-56 object-cover">
-        <div class="p-5">
-          <h2 class="text-xl font-semibold text-gray-800 mb-2">Living Room Makeover</h2>
-          <p class="text-gray-600 mb-4">Upgrade your living space with a fresh modern design. Includes flooring, lighting, and decor.</p>
-          <a href="#" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded">Book Now</a>
-        </div>
-      </div>
+      
+      <!-- CARD COMPONENT -->
+      <% const services = [
+        {
+          img: "/images/L7nBRvsxgT6qAWnoxTpCdU.jpg",
+          title: "Living Room Makeover",
+          desc: "Upgrade your living space with a fresh modern design. Includes flooring, lighting, and decor."
+        },
+        {
+          img: "/images/kitchen.png",
+          title: "Kitchen Remodeling",
+          desc: "Transform your kitchen into a sleek, functional culinary haven. Appliances included."
+        },
+        {
+          img: "/images/Bedroom-2.png",
+          title: "Bedroom Interior",
+          desc: "Design a calm and luxurious retreat with our bedroom interior package. Includes wardrobe and lighting."
+        },
+        {
+          img: "/images/bathroom-renovation.jpg",
+          title: "Bathroom Renovation",
+          desc: "Stylish fixtures and functional layout upgrades for your bathroom. Includes shower and tiling work."
+        },
+        {
+          img: "/images/beaufort-sc-white-house-2000-b24713dcd2bd49aebff022e8eb6577b7.jpg",
+          title: "Full Home Revamp",
+          desc: "A complete home makeover tailored to your style and needs. Includes project management."
+        }
+      ]; %>
 
-      <!-- Card 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="/images/renovation2.jpg" alt="Kitchen Remodeling" class="w-full h-56 object-cover">
-        <div class="p-5">
-          <h2 class="text-xl font-semibold text-gray-800 mb-2">Kitchen Remodeling</h2>
-          <p class="text-gray-600 mb-4">Transform your kitchen into a sleek, functional culinary haven. Appliances included.</p>
-          <a href="#" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded">Book Now</a>
+      <% services.forEach(service => { %>
+        <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+          <img src="<%= service.img %>" alt="<%= service.title %>" class="w-full h-56 object-cover">
+          <div class="p-5">
+            <h2 class="text-xl font-semibold mb-2"><%= service.title %></h2>
+            <p class="text-gray-300 mb-4"><%= service.desc %></p>
+            <a href="/book-renovation/<%= encodeURIComponent(service.title) %>" 
+                class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition">
+               Book Now
+             </a>
+          </div>
         </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="/images/renovation3.jpg" alt="Bedroom Interior" class="w-full h-56 object-cover">
-        <div class="p-5">
-          <h2 class="text-xl font-semibold text-gray-800 mb-2">Bedroom Interior</h2>
-          <p class="text-gray-600 mb-4">Design a calm and luxurious retreat with our bedroom interior package. Includes wardrobe and lighting.</p>
-          <a href="#" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded">Book Now</a>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="/images/renovation4.jpg" alt="Bathroom Renovation" class="w-full h-56 object-cover">
-        <div class="p-5">
-          <h2 class="text-xl font-semibold text-gray-800 mb-2">Bathroom Renovation</h2>
-          <p class="text-gray-600 mb-4">Stylish fixtures and functional layout upgrades for your bathroom. Includes shower and tiling work.</p>
-          <a href="#" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded">Book Now</a>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="/images/renovation5.jpg" alt="Full Home Revamp" class="w-full h-56 object-cover">
-        <div class="p-5">
-          <h2 class="text-xl font-semibold text-gray-800 mb-2">Full Home Revamp</h2>
-          <p class="text-gray-600 mb-4">A complete home makeover tailored to your style and needs. Includes project management.</p>
-          <a href="#" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded">Book Now</a>
-        </div>
-      </div>
+      <% }) %>
 
     </div>
   </div>

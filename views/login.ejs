@@ -6,47 +6,49 @@
   <title>Login | Radiant Interiors</title>
   <link href="/css/output.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-900 min-h-screen flex items-center justify-center">
-    <a href="/" 
-   class="absolute top-4 left-4 bg-cyan-600 hover:bg-cyan-700 text-white text-sm font-medium py-2 px-4 rounded-lg shadow transition duration-200">
-  ⬅ Home
-</a>
+<body class="bg-black min-h-screen flex items-center justify-center px-2 relative">
 
+  <!-- Home Button -->
+  <a href="/" 
+     class="absolute top-4 left-4 bg-cyan-600 hover:bg-cyan-700 text-white text-sm font-medium py-2 px-4 rounded-lg shadow transition duration-200">
+    ⬅ Home
+  </a>
 
-  <div class="w-full max-w-md bg-gray-800 rounded-xl shadow-2xl p-8">
-    <h2 class="text-3xl font-bold text-center text-white mb-6">Welcome Back</h2>
+  <!-- Login Card -->
+  <div class="w-full max-w-sm bg-neutral-900 rounded-xl shadow-2xl p-4 sm:p-6">
+    <h2 class="text-2xl font-semibold text-center text-white mb-5">Welcome Back</h2>
 
     <% if (error) { %>
-        <div class="bg-red-500 text-white text-sm text-center py-2 rounded">
-          <%= error %>
-        </div>
-      <% } %>
+      <div class="bg-red-500 text-white text-sm text-center py-1 px-2 rounded mb-3">
+        <%= error %>
+      </div>
+    <% } %>
 
-    <form action="/login" method="POST" class="space-y-5">
+    <form action="/login" method="POST" class="space-y-4 text-sm">
       <!-- Email -->
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+        <label for="email" class="block text-gray-300 mb-1">Email Address</label>
         <input type="email" name="email" id="email" required
-          class="mt-1 block w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-md shadow-sm focus:ring focus:ring-cyan-500 focus:outline-none" />
+          class="w-full px-3 py-2 bg-neutral-800 text-white border border-gray-700 rounded focus:outline-none focus:ring-1 focus:ring-cyan-500" />
       </div>
 
       <!-- Password -->
       <div>
-        <label for="password" class="block text-sm font-medium text-gray-300">Password</label>
+        <label for="password" class="block text-gray-300 mb-1">Password</label>
         <input type="password" name="password" id="password" required
-          class="mt-1 block w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-md shadow-sm focus:ring focus:ring-cyan-500 focus:outline-none" />
+          class="w-full px-3 py-2 bg-neutral-800 text-white border border-gray-700 rounded focus:outline-none focus:ring-1 focus:ring-cyan-500" />
       </div>
 
       <!-- Submit Button -->
       <div>
         <button type="submit"
-          class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded shadow transition duration-200">
+          class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 rounded transition duration-200">
           Sign In
         </button>
       </div>
     </form>
 
-    <p class="text-center text-sm text-gray-400 mt-4">
+    <p class="text-center text-xs text-gray-400 mt-4">
       New to Radiant Interiors?
       <a href="/register" class="text-cyan-400 hover:underline font-medium">Create an account</a>
     </p>

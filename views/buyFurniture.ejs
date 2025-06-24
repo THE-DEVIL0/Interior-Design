@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy Furniture | Radiant Interiors</title>
+  <link href="/css/output.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-white min-h-screen px-4 py-10">
+
+  <!-- Header -->
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-10">
+      <h1 class="text-4xl font-bold">Furniture Collection</h1>
+      <a href="/services" class="text-sm text-cyan-400 hover:underline">&larr; Back to Services</a>
+    </div>
+
+    <!-- Furniture Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <% furnitureList.forEach(item => { %>
+        <div class="bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+          <img src="<%= item.image %>" alt="<%= item.name %>" class="w-full h-56 object-cover">
+          <div class="p-5">
+            <h2 class="text-xl font-semibold mb-2"><%= item.name %></h2>
+            <p class="text-gray-300 mb-3"><%= item.description %></p>
+            <p class="text-cyan-400 font-bold mb-4">Rs. <%= item.price %></p>
+
+            <form action="/buy-furniture/<%= item._id %>" method="POST" class="space-y-3">
+                <label for="quantity-<%= item._id %>" class="block text-sm text-gray-300 mb-1">Quantity</label>
+                <input type="number" name="quantity" id="quantity-<%= item._id %>" value="1" min="1" required
+                  class="w-full px-3 py-2 bg-gray-700 text-white rounded-md border border-gray-600 focus:ring focus:ring-cyan-500" />
+              
+                <button type="submit" 
+                  class="bg-green-600 hover:bg-green-700 w-full py-2 rounded-md text-white font-medium transition">
+                  Buy Now
+                </button>
+              </form>
+              
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+</body>
+</html>
