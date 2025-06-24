@@ -78,7 +78,7 @@
             <% bookings.forEach(booking => { %>
               <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 shadow-md">
                 <h3 class="text-xl font-bold mb-2"><%= booking.serviceType %></h3>
-                <p class="text-gray-300">Preferred Date: <%= booking.preferredDate.toDateString() %></p>
+                
                 <p class="text-gray-300">Scheduled Date: <%= booking.scheduledDate.toDateString() %></p>
                 <% if (booking.notes) { %>
                   <p class="text-gray-400 mt-2">Notes: <%= booking.notes %></p>
