@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Radiant Interiors</title>
+  <link href="/css/output.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+
+  <!-- Top Bar with Logout -->
+  <div class="w-full flex justify-between items-center px-6 py-4 bg-gray-800 shadow-md">
+    <h1 class="text-2xl font-bold">Radiant Interiors</h1>
+    <form action="/logout" method="POST">
+      <button type="submit"
+        class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition font-medium">
+        Logout
+      </button>
+    </form>
+  </div>
+
+  <!-- Service Options -->
+  <main class="flex flex-col items-center justify-center px-4 py-12">
+    <h2 class="text-4xl font-bold mb-10">Our Services</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full">
+
+      <!-- Renovation -->
+      <div class="bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center">
+        <h3 class="text-2xl font-semibold mb-4">Book a Renovation</h3>
+        <p class="text-gray-300 text-center mb-6">
+          Schedule a renovation visit and let our experts transform your home with style and comfort.
+        </p>
+        <a href="/book-renovation"
+          class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-md font-medium transition">
+          Book Renovation
+        </a>
+      </div>
+
+      <!-- Furniture -->
+      <div class="bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center">
+        <h3 class="text-2xl font-semibold mb-4">Buy Furniture</h3>
+        <p class="text-gray-300 text-center mb-6">
+          Browse our elegant furniture collection and choose the pieces that best suit your space.
+        </p>
+        <a href="/buy-furniture"
+          class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-md font-medium transition">
+          Buy Furniture
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

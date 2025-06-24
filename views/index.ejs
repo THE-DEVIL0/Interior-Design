@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Radiant Interior</title>
     <link href="/css/output.css" rel="stylesheet" />
-    <script src="/js/navbar-toggle.js" defer></script> <!-- Your toggle JS file -->
+   
   </head>
 
 <body class="bg-white text-black">
@@ -14,7 +14,7 @@
 <nav class="bg-black shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
-      
+
       <!-- Logo -->
       <div class="flex-shrink-0">
         <img src="/images/WhatsApp Image 2025-04-10 at 22.24.26_4abffe86.jpg" alt="Logo" class="h-20 w-20 object-cover rounded-md">
@@ -30,19 +30,26 @@
       </div>
 
       <!-- Nav Links -->
-      <div id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-8 w-full lg:w-auto mt-4 lg:mt-0">
+      <div id="nav-menu" class="hidden lg:flex lg:items-center justify-between w-full lg:w-auto mt-4 lg:mt-0">
         <ul class="flex flex-col lg:flex-row gap-4 lg:gap-8">
-          <li><a href="#" class="text-white hover:text-cyan-400 font-medium">Home</a></li>
+          <li><a href="/" class="text-white hover:text-cyan-400 font-medium">Home</a></li>
           <li><a href="#services" class="text-white hover:text-cyan-400 font-medium">Services</a></li>
           <li><a href="#ourwork" class="text-white hover:text-cyan-400 font-medium">Our Work</a></li>
           <li><a href="#contact" class="text-white hover:text-cyan-400 font-medium">Contact</a></li>
           <li><a href="#about" class="text-white hover:text-cyan-400 font-medium">About</a></li>
         </ul>
+
+        <!-- Account Button -->
+        <div class="ml-auto">
+          <a href="/register" class="ml-6 px-4 py-2 text-sm font-medium border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400 hover:text-white transition">
+            Login / Sign Up
+          </a>
+        </div>
       </div>
+
     </div>
   </div>
 </nav>
-
 
 
 <!-- Carousel Wrapper -->
@@ -84,7 +91,7 @@ style="height: 600px;"
         <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6 sm:px-10" style="margin-bottom: 100px;">
           <h2 class="text-white text-3xl md:text-5xl font-bold mb-4" x-text="slide.title"></h2>
           <p class="text-white text-lg md:text-xl" x-text="slide.desc"></p>
-          <a href="#" class="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Learn More</a>
+        
         </div>
       </div>
     </template>
@@ -138,7 +145,21 @@ style="height: 600px;"
     }
   </style>
   <div class="container mx-auto mt-10 px-4" id="services">
+    <!-- Login Reminder -->
+   
+    <a href="/services" 
+    class="block mx-auto my-2 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 w-max">
+   Explore Services
+ </a>
+ 
+   
+    
+  
+    <!-- Services Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Your existing card code continues here -->
+  
+    
   
       <!-- Residential Interior Design -->
       <div class="relative h-60 rounded-xl overflow-hidden group">
@@ -148,8 +169,8 @@ style="height: 600px;"
           <h3 class="text-lg font-semibold italic text-center">Residential Interior Design</h3>
           <p class="text-sm mt-2">Turn your house into a home with personalized design solutions. We bring comfort, style, and functionality together to create living spaces that reflect your lifestyle.</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="#" class="hover:underline text-sm">Learn More</a>
-            <a href="#" class="hover:underline text-sm">Get Started</a>
+            <a  href="/register" class="hover:underline text-sm">Learn More</a>
+            <a href="/register" class="hover:underline text-sm">Get Started</a>
           </div>
         </div>
       </div>
@@ -162,8 +183,8 @@ style="height: 600px;"
           <h3 class="text-lg font-semibold italic text-center">Commercial Spaces</h3>
           <p class="text-sm mt-2">We design workspaces that inspire productivity and leave lasting impressions. From offices to retail, we blend style with function for your business needs.</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="#" class="hover:underline text-sm">Explore Projects</a>
-            <a href="#" class="hover:underline text-sm">Contact Us</a>
+            <a href="/register" class="hover:underline text-sm">Explore Projects</a>
+            <a href="/register" class="hover:underline text-sm">Contact Us</a>
           </div>
         </div>
       </div>
@@ -176,8 +197,8 @@ style="height: 600px;"
           <h3 class="text-lg font-semibold italic text-center">Renovations & Makeovers</h3>
           <p class="text-sm mt-2">Breathe new life into old spaces. Whether it’s a subtle refresh or a full transformation, we re-imagine interiors to match your evolving style.</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="#" class="hover:underline text-sm">See Reno Work</a>
-            <a href="#" class="hover:underline text-sm">Request Quote</a>
+            <a href="/register" class="hover:underline text-sm">See Reno Work</a>
+            <a href="/register" class="hover:underline text-sm">Request Quote</a>
           </div>
         </div>
       </div>
@@ -190,8 +211,8 @@ style="height: 600px;"
           <h3 class="text-lg font-semibold italic text-center">3D Layout & Visualization</h3>
           <p class="text-sm mt-2">Visualize your dream space before it comes to life. Our 3D designs offer a realistic preview, helping you make confident decisions with clarity and precision.</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="#" class="hover:underline text-sm">View 3D Demos</a>
-            <a href="#" class="hover:underline text-sm">Start a Project</a>
+            <a href="/register" class="hover:underline text-sm">View 3D Demos</a>
+            <a href="/register" class="hover:underline text-sm">Start a Project</a>
           </div>
         </div>
       </div>
@@ -204,8 +225,8 @@ style="height: 600px;"
           <h3 class="text-lg font-semibold italic text-center">Custom Furniture & Decor</h3>
           <p class="text-sm mt-2">Bring your vision to life with furniture and decor tailored just for you. From statement pieces to subtle accents, we craft designs that reflect your personality and elevate your space.</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="#" class="hover:underline text-sm">Browse Portfolio</a>
-            <a href="#" class="hover:underline text-sm">Order Now</a>
+            <a href="/register" class="hover:underline text-sm">Browse Portfolio</a>
+            <a href="/register" class="hover:underline text-sm">Order Now</a>
           </div>
         </div>
       </div>
@@ -218,8 +239,8 @@ style="height: 600px;"
           <h3 class="text-lg font-semibold italic text-center">Custom Solution</h3>
           <p class="text-sm mt-2">Every space is unique—and so is our approach. We offer fully customized interior solutions that align with your needs, style, and vision from start to finish.</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="#" class="hover:underline text-sm">Start Consultation</a>
-            <a href="#" class="hover:underline text-sm">Learn More</a>
+            <a href="/register" class="hover:underline text-sm">Start Consultation</a>
+            <a href="/register" class="hover:underline text-sm">Learn More</a>
           </div>
         </div>
       </div>
@@ -248,7 +269,7 @@ style="height: 600px;"
           interiors that truly resonate with our clients. From concept to completion, Radiant Interior ensures that every
           detail shines.
         </p>
-        <button type="button" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded transition">
+        <button type="button"  onclick="window.location.href='/register'" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded transition">
           Book Your Appointment
         </button>
       </div>
@@ -314,7 +335,8 @@ style="height: 600px;"
       <hr class="w-24 border-2 border-dotted border-white my-4 mx-auto">
       <p class="tracking-widest uppercase">[ Call Us Today ]</p>
       <h2 class="text-3xl md:text-4xl mt-2">+92 314 1979700</h2>
-      <p class="mt-2 italic">Or Click Here</p>
+      <p class="text-sm text-white">Need an account? <a href="/auth" class="text-cyan-400 underline">Sign up here</a></p>
+
     </div>
   </div>
 </section>
